@@ -2,7 +2,7 @@
 
 [PDFtk Server](https://www.pdflabs.com/tools/pdftk-server/) is a program that can password-protect, merge, and split PDF files (among other things).
 
-This document describes basic use of PDKtk on Windows and makes no assumptions regarding prior experience with PDFtk Server or with [command-line applications](https://en.wikipedia.org/wiki/Command-line_interface) in general.
+This document describes basic use of PDKtk Server on Windows and makes no assumptions regarding prior experience with PDFtk Server or with [command-line applications](https://en.wikipedia.org/wiki/Command-line_interface) in general.
 
 For a full description of PDFtk Server's capabilities, consult [its manual](https://www.pdflabs.com/docs/pdftk-man-page/).
 
@@ -52,7 +52,7 @@ Unless you have a reason for not wanting the PDFtk directory on the path (e.g., 
 
 ## Obtaining File and Folder Paths
 
-When using PDFtk, you'll need to specify the paths to input files you want it to process and the paths of output files you want it to create. The path of an output file that doesn't yet exist can be obtained by taking a folder path and appending a slash and the name of a file it doesn't contain.
+When using PDFtk, you'll need to specify the paths to input files you want it to process and the paths of output files you want it to create. The path of an output file that doesn't yet exist can be obtained by taking a folder path and appending a slash and the name of a file the folder doesn't contain.
 
 To obtain the path for a file:
 
@@ -74,7 +74,7 @@ Although paths on Windows usually use a backslash character (`\`) to separate ea
 
 ## Commands for Specific Tasks
 
-In practical terms, a command is a line of text typed (or pasted) into a command prompt or PowerShell window. Commands are executed by pressing enter.
+In practical terms, a command is a line of text typed (or pasted) into a command prompt or PowerShell window. Commands are executed by pressing Enter.
 
 I recommend preparing commands in a text editor (like Notepad or Notepad++; see the "Obtaining File Paths" section above) and then copying and pasting them into the command prompt/PowerShell window.
 
@@ -138,7 +138,7 @@ pdftk "C:\animal lists\List of rodents.pdf" "C:\data\rodents-ordered-by-weight.p
 
 Note: `cat` is an abbreviation of the word "concatenate", which means "to join or link together". A notable use of this abbreviation is [Unix's cat utility](https://en.wikipedia.org/wiki/Cat_(Unix)).
 
-### Splitting a PDF into Multiple PDFs
+### Extracting Pages Within a PDF
 
 What you need:
 
@@ -146,7 +146,7 @@ What you need:
 * The page range you wish to extract from the input file.
   * Page ranges are inclusive and consist of the numbers of the start and end pages, separated by a hyphen (e.g., `3-5`).
   * If you wish to extract a single page, you may omit the hyphen and the end page number (e.g., `5`), although specifying the same value for the start and end page numbers (e.g., `5-5`) will also work.
-* The paths to the output files.
+* The path to the output file.
 
 General form of the command:
 
