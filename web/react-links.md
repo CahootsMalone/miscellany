@@ -26,3 +26,4 @@
 * https://redux-toolkit.js.org/
     * [Getting started](https://redux-toolkit.js.org/introduction/getting-started)
         * [Included APIs](https://redux-toolkit.js.org/introduction/getting-started#whats-included)
+    * [Usage guide](https://redux-toolkit.js.org/usage/usage-guide)
