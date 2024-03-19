@@ -1,0 +1,119 @@
+<html>
+<head>
+<style>
+.c1 {
+    background-color: red;
+    padding: 15px;
+
+    max-width: 250px;
+    text-overflow: ellipsis; /* Not inherited */
+    overflow: hidden; /* Not inherited | Required for text-overflow: ellipsis */
+    white-space: nowrap; /* Inherited | Required for text-overflow: ellipsis if whitespace is present in content */
+}
+
+.c2 {
+    background-color: green;
+}
+
+.c1a {
+    background-color: blue;
+    padding: 15px;
+
+    max-width: 250px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.c2a {
+    background-color: green;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.c2b {
+    background-color: green;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.c1b {
+    color: white;
+    background-color: purple;
+    padding: 15px; /* Padding makes text beyond the ellipsis visible, presumably because it hasn't technically overflowed the container. */
+    
+    width: 250px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+</style>
+</head>
+<body>
+
+<!--
+https://developer.mozilla.org/en-US/docs/Web/CSS/text-overflow
+https://developer.mozilla.org/en-US/docs/Web/CSS/white-space
+https://developer.mozilla.org/en-US/docs/Web/CSS/overflow
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-line-clamp
+
+Links for -webkit-box-orient on MDN go to this page (there isn't a dedicated one for the -webkit prefix version):
+https://developer.mozilla.org/en-US/docs/Web/CSS/box-orient
+
+
+Wrapping/overflow styling is sensitive to whether or not natural wrapping points (primarily whitespace) are present.
+AbcdefghAbcdefghAbcdefghAbcdefghAbcdefghAbcdefghAbcdefgh
+Abcdefgh Abcdefgh Abcdefgh Abcdefgh Abcdefgh Abcdefgh Abcdefgh
+
+-->
+
+<div class="c1">
+    Abcdefgh Abcdefgh Abcdefgh Abcdefgh Abcdefgh Abcdefgh Abcdefgh
+</div>
+
+<br />
+
+<div class="c1">
+    <div class="c2">
+        Abcdefgh Abcdefgh Abcdefgh Abcdefgh Abcdefgh Abcdefgh Abcdefgh
+    </div>
+</div>
+
+<br />
+
+<div class="c1a">
+    Abcdefgh Abcdefgh Abcdefgh Abcdefgh Abcdefgh Abcdefgh Abcdefgh
+</div>
+
+<br />
+
+<div class="c1">
+    <div class="c2a">
+        Abcdefgh Abcdefgh Abcdefgh Abcdefgh Abcdefgh Abcdefgh Abcdefgh
+    </div>
+</div>
+
+<br />
+
+<div class="c1">
+    <div class="c2b">
+        Abcdefgh Abcdefgh Abcdefgh Abcdefgh Abcdefgh Abcdefgh Abcdefgh
+    </div>
+</div>
+
+<br />
+
+<div class="c1b">
+    Abcdefgh Abcdefgh Abcdefgh Abcdefgh Abcdefgh Abcdefgh Abcdefgh Abcdefgh Abcdefgh Abcdefgh Abcdefgh Abcdefgh Abcdefgh Abcdefgh
+</div>
+
+<br />
+
+
+
+
+</body>
+</html>
