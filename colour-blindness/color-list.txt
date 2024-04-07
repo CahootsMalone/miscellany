@@ -1,0 +1,22 @@
+Sample input file for colour-square-generator.py
+
+red #FF0000
+green #00FF00
+blue #0000FF
+yellow #FFFF00
+cyan #00FFFF
+magenta #FF00FF
+
+From https://web.archive.org/web/20180503023309/https://www.ibm.com/design/language/resources/color-library
+ibm_1 and ibm_2 are too similar, in my opinion; ditto for ibm_4 and ibm_5.
+ibm_1 #648fff
+ibm_2 #785ef0
+ibm_3 #dc267f
+ibm_4 #fe6100
+ibm_5 #ffb000
+
+From https://davidmathlogic.com/colorblind/#%23D81B60-%231E88E5-%23FFC107-%23004D40
+david_nichols_1 #D81B60
+david_nichols_2 #1E88E5
+david_nichols_3 #FFC107
+david_nichols_4 #004D40
