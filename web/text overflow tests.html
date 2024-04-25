@@ -49,6 +49,24 @@
     overflow: hidden;
 }
 
+.wrap-no-whitespace1 {
+    color: black;
+    background-color: yellow;
+    padding: 15px;
+    width: 250px;
+    
+    overflow-wrap: anywhere;
+}
+
+.wrap-no-whitespace2 {
+    color: black;
+    background-color: yellow;
+    padding: 15px;
+    width: 250px;
+    
+    word-break: break-all;
+}
+
 </style>
 </head>
 <body>
@@ -63,6 +81,8 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-line-clamp
 Links for -webkit-box-orient on MDN go to this page (there isn't a dedicated one for the -webkit prefix version):
 https://developer.mozilla.org/en-US/docs/Web/CSS/box-orient
 
+https://developer.mozilla.org/en-US/docs/Web/CSS/overflow-wrap
+https://developer.mozilla.org/en-US/docs/Web/CSS/word-break
 
 Wrapping/overflow styling is sensitive to whether or not natural wrapping points (primarily whitespace) are present.
 AbcdefghAbcdefghAbcdefghAbcdefghAbcdefghAbcdefghAbcdefgh
@@ -112,8 +132,15 @@ Abcdefgh Abcdefgh Abcdefgh Abcdefgh Abcdefgh Abcdefgh Abcdefgh
 
 <br />
 
+<div class="wrap-no-whitespace1">
+    Abcdefgh AbcdefghAbcdefghAbcdefghAbcdefgh AbcdefghAbcdefghAbcdefghAbcdefghAbcdefghAbcdefghAbcdefghAbcdefghAbcdefghAbcdefghAbcdefghAbcdefghAbcdefghAbcdefgh
+</div>
 
+<br />
 
+<div class="wrap-no-whitespace2">
+    Abcdefgh AbcdefghAbcdefghAbcdefghAbcdefgh AbcdefghAbcdefghAbcdefghAbcdefghAbcdefghAbcdefghAbcdefghAbcdefghAbcdefghAbcdefghAbcdefghAbcdefghAbcdefghAbcdefgh
+</div>
 
 </body>
 </html>
